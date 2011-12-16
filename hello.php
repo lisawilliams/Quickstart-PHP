@@ -8,8 +8,16 @@
 <body>
 <p>The following was created by PHP:</p>
 <?PHP
-print("Hello, world!");
+/*
+ * Filename: hello.php 
+ * Book reference: Script 1.6
+ *
+ */
+ 
+print "<span style=\"font-weight:bold'\">Hello, 
+world!</span>\n";
 ?>
+<!-- This is an HTML comment. -->
 </p>
 </body>
 </html>
