@@ -9,7 +9,7 @@ $page_title = "";
 	<title><?php print($page_title) ?></title>
 </head>
 <body>
-<?php
+<?php  // Script 5.6 thanks.php
 
 // error handling
 ini_set('display errors',1);  // Let me learn from my mistakes!
