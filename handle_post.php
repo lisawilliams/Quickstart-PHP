@@ -20,14 +20,17 @@ error_reporting(E_ALL|E_STRICT); // Show all possible problems!
 // Get the values from the $_POST array: 
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
-$posting = $_POST['posting'];
+$posting = nl2br($_POST['posting']);
 
 // Create a full-name variable: 
 $name = $first_name . ' '.$last_name;
 
-// Print a message: 
+// Print a message. Use strip_post and htmlentities_post to show how they effect text handling.
+$strip_post = strip_tags($_POST['posting']);
 print "<div>Thank you, $name, for your posting: 
-<p>$posting</p></div>";
+<p>$posting</p>
+<p>$html_post</p>
+<p>$strip_post</p></div>";
 
 ?>
 </body>
