@@ -14,8 +14,8 @@ $page_title = "";
 first_name, last_name, email, posting, submit */
 
 // error handling
-//ini_set('display errors',1);  // Let me learn from my mistakes!
-//error_reporting(E_ALL); // Show all possible problems! 
+ini_set('display errors',1);  // Let me learn from my mistakes!
+error_reporting(E_ALL|E_STRICT); // Show all possible problems! 
 
 // Get the values from the $_POST array:
 $first_name = $_POST['first_name'];
@@ -31,7 +31,7 @@ print "<div>Thank you, $name, for your posting:
 <p>$posting</p></div>";
 
 // Make a link to another page:
-$name = urlencode ($name);
+$name = urlencode($_POST['$first_name']);
 $email = urlencode($_POST['email']);
 print "<p>Click <a href=\"thanks.php?name=$name&email=$email\">here</a> to continue.</p>";
 
