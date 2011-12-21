@@ -41,7 +41,18 @@ if (empty($_POST['password']))
 		print '<p class="error">Please enter your password.</p>';
 		$okay = FALSE;
 	}	
-	
+
+// Check the two passwords for equality 
+
+if ($_POST['password'] != $_POST['confirm'])
+
+	{
+		print '<p class="error">Your passwords do not match.</p>';
+		$okay = FALSE;
+	}	
+
+
+
 // Validate the birthday: 
 
 $birthday = '';
@@ -81,6 +92,13 @@ if(is_numeric($_POST['year']))
 		$okay = FALSE;
 	}		
 	
+if ($_POST['year'] >= 2011)
+	
+	{
+		print '<p class="error">Did you invent time travel?  Because it looks like you come from the future!</p>';	
+		$okay = FALSE;
+	}
+		
 if (empty($okay))
 	{
 		print '<p> <a href ="register.php">Go back to registration page</a>';
