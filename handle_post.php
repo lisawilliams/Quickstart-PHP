@@ -9,7 +9,7 @@ $page_title = "";
 	<title><?php print($page_title) ?></title>
 </head>
 <body>
-<?php // Script 5.5 - handle_post.php #4
+<?php // Script 5.8 - handle_post.php #6
 /* This script receives five values from posting.html:
 first_name, last_name, email, posting, submit */
 
@@ -19,8 +19,8 @@ first_name, last_name, email, posting, submit */
 
 // Get the values from the $_POST array:
 $first_name = trim($_POST['first_name']);
-$last_name = $_POST['last_name'];
-$posting = nl2br($_POST['posting']);
+$last_name = trim($_POST['last_name']);
+$posting = trim($_POST['posting']);
 
 
 // Create a full name variable:
@@ -29,6 +29,10 @@ $name = $first_name . ' ' . $last_name;
 // Get a word count: 
 
 $words = str_word_count($posting);
+
+// Take out the bad words: 
+
+$posting = str_ireplace('Republicans', '<strike>Republicans</strike>', $posting);
 
 // Print out the number of words 
 
