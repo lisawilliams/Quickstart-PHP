@@ -42,6 +42,45 @@ if (empty($_POST['password']))
 		$okay = FALSE;
 	}	
 	
+// Validate the birthday: 
+
+$birthday = '';
+
+// Validate the month: 
+
+if(is_numeric($_POST['month'])) 
+	{
+		$birthday = $_POST['month'].'-';
+		
+			} else {
+		print '<p class="error">Please select the month you were born</p>';
+		$okay = FALSE;
+	}		
+	
+// Validate the day: 
+
+if(is_numeric($_POST['day'])) 
+	{
+		$birthday.= $_POST['day'].'-';
+		
+			} else {
+			
+		print '<p class="error">Please select the day you were born</p>';
+		$okay = FALSE;
+	}	
+	
+// Validate the year: 
+
+if(is_numeric($_POST['year'])) 
+	{
+		$birthday.= $_POST['year'];
+		
+			} else {
+			
+		print '<p class="error">Please enter the year you were born as four digits.</p>';
+		$okay = FALSE;
+	}		
+	
 if (empty($okay))
 	{
 		print '<p> <a href ="register.php">Go back to registration page</a>';
@@ -52,6 +91,7 @@ if (empty($okay))
 if($okay) 
 	{
 	print '<p>You have been successfully registered (but not really).</p>';
+	print "<p>You entered your birthday as $birthday.</p>";
 	}
 	
 
