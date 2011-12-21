@@ -77,11 +77,11 @@ echo '<option value="29">29</option>';
 echo '<option value="30">30</option>';
 echo '<option value="31">31</option>';
 echo '</select>';
-echo '</p>';
+
 
 // Year input 
 
-echo '<p>Year: <input type= "text" name="year" value="YYYY" size="4" /></p>';
+echo ' Year: <input type= "text" name="year" value="YYYY" size="4" /></p>';
 
  
 // I am awesome.  I just made my first include file of my own creation -- not typing from a tutorial! 
