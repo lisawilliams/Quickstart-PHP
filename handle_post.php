@@ -18,7 +18,7 @@ first_name, last_name, email, posting, submit */
 //error_reporting(E_ALL); // Show all possible problems! 
 
 // Get the values from the $_POST array:
-$first_name = $_POST['first_name'];
+$first_name = trim($_POST['first_name']);
 $last_name = $_POST['last_name'];
 $posting = nl2br($_POST['posting']);
 
@@ -26,9 +26,23 @@ $posting = nl2br($_POST['posting']);
 // Create a full name variable:
 $name = $first_name . ' ' . $last_name;
 
+// Get a word count: 
+
+$words = str_word_count($posting);
+
+// Print out the number of words 
+
+print "<p>There are $words in this posting.</p>";
+
+// Get a snippet of the posting: 
+
+$posting = substr($posting, 0, 50);
+
+
 // Print a message:
+
 print "<div>Thank you, $name, for your posting:
-<p>$posting</p></div>";
+<p>$posting...</p></div>";
 
 // Make a link to another page:
 $name = urlencode ($name);
