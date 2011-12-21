@@ -80,25 +80,41 @@ if(is_numeric($_POST['day']))
 		$okay = FALSE;
 	}	
 	
-// Validate the year: 
+// (OLD YEAR VALIDATION CODE Validate the year: 
 
-if(is_numeric($_POST['year'])) 
+// if(is_numeric($_POST['year'])) 
+//	{
+//		$birthday.= $_POST['year'];
+//		
+//			} else {
+//			
+//		print '<p class="error">Please enter the year you were born as four digits.</p>';
+//		$okay = FALSE;
+//	}		
+
+if (is_numeric($_POST['year']) AND (strlen($_POST['year']) == 4)) 
+
+	// then check that they were born before 2011
 	{
-		$birthday.= $_POST['year'];
-		
-			} else {
+	
+		if ($_POST['year'] >= 2011)
+	
+			{
+				print '<p class="error">Did you invent time travel?  Because it looks like you come from the future!</p>';	
+				$okay = FALSE;
 			
+		} else {
+		
+		$birthday .=$_POST['year'];
+		}
+
+		} else {
+		
 		print '<p class="error">Please enter the year you were born as four digits.</p>';
 		$okay = FALSE;
-	}		
-	
-if ($_POST['year'] >= 2011)
-	
-	{
-		print '<p class="error">Did you invent time travel?  Because it looks like you come from the future!</p>';	
-		$okay = FALSE;
-	}
 		
+	}
+	
 if (empty($okay))
 	{
 		print '<p> <a href ="register.php">Go back to registration page</a>';
