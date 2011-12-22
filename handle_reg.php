@@ -28,7 +28,7 @@ $okay = TRUE;
 
 // Validate the email address 
 
-if (empty($_POST['password'])) 
+if (empty($_POST['email'])) 
 	{
 		print '<p class="error">Please enter your email address.</p>';
 		$okay = FALSE;
@@ -80,17 +80,6 @@ if(is_numeric($_POST['day']))
 		$okay = FALSE;
 	}	
 	
-// (OLD YEAR VALIDATION CODE Validate the year: 
-
-// if(is_numeric($_POST['year'])) 
-//	{
-//		$birthday.= $_POST['year'];
-//		
-//			} else {
-//			
-//		print '<p class="error">Please enter the year you were born as four digits.</p>';
-//		$okay = FALSE;
-//	}		
 
 if (is_numeric($_POST['year']) AND (strlen($_POST['year']) == 4)) 
 
@@ -106,7 +95,8 @@ if (is_numeric($_POST['year']) AND (strlen($_POST['year']) == 4))
 		} else {
 		
 		$birthday .=$_POST['year'];
-		}
+		
+			}
 
 		} else {
 		
@@ -115,9 +105,35 @@ if (is_numeric($_POST['year']) AND (strlen($_POST['year']) == 4))
 		
 	}
 	
+// Validate the color: 
+
+if ($_POST['color']=='red')
+	{
+		print '<p style="color:red;">Red is your favorite color!</p>';
+	}		
+	
+elseif($_POST['color']=='yellow')
+	{
+		print'<p style="color:yellow;">Yellow is your favorite color!</p>';
+	} 
+	
+elseif($_POST['color']=='green')
+	{
+		print'<p style="color:green;">Green is your favorite color!</p>';
+	}					
+	
+elseif($_POST['color']=='blue')
+	{
+		print'<p style="color:blue;">Blue is your favorite color!</p>';
+	
+	}	else	{ // Problem!
+	print '<p class ="error">Please select your favorite color.</p>';
+	
 if (empty($okay))
 	{
 		print '<p> <a href ="register.php">Go back to registration page</a>';
+	}
+	$okay = FALSE;
 	}
 
 // If there were no errors, print a success message: 
@@ -127,6 +143,7 @@ if($okay)
 	print '<p>You have been successfully registered (but not really).</p>';
 	print "<p>You entered your birthday as $birthday.</p>";
 	}
+
 	
 
 ?>

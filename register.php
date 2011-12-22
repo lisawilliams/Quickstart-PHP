@@ -1,5 +1,5 @@
 <?php
-$page_title = "";
+$page_title = "Register";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -30,12 +30,12 @@ include_once("includes/date_picker.inc.php");
 ?>
 
 <p>Favorite color:
-<select name "color"
-<option value "">Pick one</option>
-<option value "red">Red</option>
-<option value "yellow">Yellow</option>
-<option value "green">Green</option>
-<option value "blue">Blue</option>
+<select name="color">
+<option value="pick">Pick one</option>
+<option value="red">Red</option>
+<option value="yellow">Yellow</option>
+<option value="green">Green</option>
+<option value="blue">Blue</option>
 </select></p>
 
 <input type="submit" name="submit" value="Register" />
