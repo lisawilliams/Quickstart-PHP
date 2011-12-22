@@ -9,8 +9,9 @@ $page_title = "";
 	<title><?php print($page_title) ?></title>
 </head>
 <body>
-<?php  // reusable month picker include file  month.inc.php 
-// I'll probably make it a month/date thing at some point  
+<?php  
+
+//Reusable month/day/year picker  
 
 // error handling
 
@@ -41,44 +42,56 @@ echo '<option value="11">November</option>';
 echo '<option value ="12">December</option>';
 echo '</select>';
 
-// Day picker
+// New improved day picker code.  Uses for loop to increment day number until it reaches 31 
 
-echo '<select name="day">';
-echo '<option value="">Day</option>';
-echo '<option value="1">1</option>' ;
-echo '<option value="2">2</option>' ;
-echo '<option value="3">3</option>';
-echo '<option value="4">4</option>';
-echo '<option value="5">5</option>';
-echo '<option value="6">6</option>';
-echo '<option value="7">7</option>';
-echo '<option value="8">8</option>';
-echo '<option value="9">9</option>';
-echo '<option value="10">10</option>';
-echo '<option value="11">11</option>';
-echo '<option value="12">12</option>';
-echo '<option value="13">13</option>';
-echo '<option value="14">14</option>';
-echo '<option value="15">15</option>';
-echo '<option value="16">16</option>';
-echo '<option value="17">17</option>';
-echo '<option value="18">18</option>';
-echo '<option value="19">19</option>';
-echo '<option value="20">20</option>';
-echo '<option value="21">21</option>';
-echo '<option value="22">22</option>';
-echo '<option value="23">23</option>';
-echo '<option value="24">24</option>';
-echo '<option value="25">25</option>';
-echo '<option value="26">26</option>';
-echo '<option value="27">27</option>';
-echo '<option value="28">28</option>';
-echo '<option value="29">29</option>';
-echo '<option value="30">30</option>';
-echo '<option value="31">31</option>';
+echo '<select name ="day">';
+echo '<option value"">Day</option>';
+
+for($d = 1; $d < 31; $d++)
+		{
+		echo '<option value=\"$d\">$d</option>\n';
+		}	
+	
 echo '</select>';
 
+// Old day picker code.  You can see how much more efficient the new code is!
 
+// echo '<select name="day">';
+// echo '<option value="">Day</option>';
+// echo '<option value="1">1</option>' ;
+// echo '<option value="2">2</option>' ;
+// echo '<option value="3">3</option>';
+// echo '<option value="4">4</option>';
+// echo '<option value="5">5</option>';
+// echo '<option value="6">6</option>';
+// echo '<option value="7">7</option>';
+// echo '<option value="8">8</option>';
+// echo '<option value="9">9</option>';
+// echo '<option value="10">10</option>';
+// echo '<option value="11">11</option>';
+// echo '<option value="12">12</option>';
+// echo '<option value="13">13</option>';
+// echo '<option value="14">14</option>';
+// echo '<option value="15">15</option>';
+// echo '<option value="16">16</option>';
+// echo '<option value="17">17</option>';
+// echo '<option value="18">18</option>';
+// echo '<option value="19">19</option>';
+// echo '<option value="20">20</option>';
+// echo '<option value="21">21</option>';
+// echo '<option value="22">22</option>';
+// echo '<option value="23">23</option>';
+// echo '<option value="24">24</option>';
+// echo '<option value="25">25</option>';
+// echo '<option value="26">26</option>';
+// echo '<option value="27">27</option>';
+// echo '<option value="28">28</option>';
+// echo '<option value="29">29</option>';
+// echo '<option value="30">30</option>';
+// echo '<option value="31">31</option>';
+// echo '</select>';
+
+		
 // Year input 
 
 echo ' Year: <input type= "text" name="year" value="YYYY" size="4" /></p>';
