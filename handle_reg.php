@@ -105,37 +105,66 @@ if (is_numeric($_POST['year']) AND (strlen($_POST['year']) == 4))
 		
 	}
 	
+//OLD COLOR VALIDATION CODE using else and elseif 
 // Validate the color: 
 
-if ($_POST['color']=='red')
-	{
-		print '<p style="color:red;">Red is your favorite color!</p>';
-	}		
-	
-elseif($_POST['color']=='yellow')
-	{
-		print'<p style="color:yellow;">Yellow is your favorite color!</p>';
-	} 
-	
-elseif($_POST['color']=='green')
-	{
-		print'<p style="color:green;">Green is your favorite color!</p>';
-	}					
-	
-elseif($_POST['color']=='blue')
-	{
-		print'<p style="color:blue;">Blue is your favorite color!</p>';
-	
-	}	else	{ // Problem!
-	print '<p class ="error">Please select your favorite color.</p>';
-	
-if (empty($okay))
-	{
-		print '<p> <a href ="register.php">Go back to registration page</a>';
-	}
-	$okay = FALSE;
-	}
+// if ($_POST['color']=='red')
+// 	{
+// 		print '<p style="color:red;">Red is your favorite color!</p>';
+// 	}		
+// 	
+// elseif($_POST['color']=='yellow')
+// 	{
+// 		print'<p style="color:yellow;">Yellow is your favorite color!</p>';
+// 	} 
+// 	
+// elseif($_POST['color']=='green')
+// 	{
+// 		print'<p style="color:green;">Green is your favorite color!</p>';
+// 	}					
+// 	
+// elseif($_POST['color']=='blue')
+// 	{
+// 		print'<p style="color:blue;">Blue is your favorite color!</p>';
+// 	
+// 	}	else	{ // Problem!
+// 	print '<p class ="error">Please select your favorite color.</p>';
+// 	
+// if (empty($okay))
+// 	{
+// 		print '<p> <a href ="register.php">Go back to registration page</a>';
+// 	}
+// 	$okay = FALSE;
+// 	}
 
+// NEW COLOR VALIDATION CODE USING SWITCH/BREAK 
+// Validate the color:
+
+switch($_POST['color'])
+	{
+		case 'red':
+		print '<p style="color:red">Red is your favorite color!</p>';
+		break;
+		
+		case 'yellow':
+		print '<p style="color:yellow">Yellow is your favorite color!</p>';
+		break;
+		
+		case 'green':
+		print '<p style="color:green">Green is your favorite color!</p>';
+		break;
+		
+		case 'blue':
+		print '<p style="color:blue">Blue is your favorite color!</p>';
+		break;
+		
+		default:
+		print '<p class="error">Please select your favorite color.</p>';
+		
+		$okay = FALSE;
+		break;
+	} // End of switch	
+	
 // If there were no errors, print a success message: 
 
 if($okay) 
