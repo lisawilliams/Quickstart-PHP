@@ -48,19 +48,31 @@ $books = array(
 'PHP 6 and MySQL 5 VQP' => $phpmysql
 );
 
+
 // Print out some values:  
-
-print "<p>The third chapter of my first book is <i>{$books['PHP VQS'][3]};</i></p>";
-print "<p>The first chapter of my second book is <i>{$books['PHP 5 Advanced VQP'][1]};</i></p>";
-print "<p>The fourth chapter of my fourth book is <i>{$books['PHP 6 and MySQL 5 VQP'][4]};</i></p>";
-
+// 
+// print "<p>The third chapter of my first book is <i>{$books['PHP VQS'][3]};</i></p>";
+// print "<p>The first chapter of my second book is <i>{$books['PHP 5 Advanced VQP'][1]};</i></p>";
+// print "<p>The fourth chapter of my fourth book is <i>{$books['PHP 6 and MySQL 5 VQP'][4]};</i></p>";
+// 
 // See what happens with foreach: 
+// 
+// foreach($books as $key =>$value) 
+// 	{
+// 		print"<p>$key:$value</p>\n";
+// 	}
 
-foreach($books as $key =>$value) 
+foreach ($books as $title => $chapters)
 	{
-		print"<p>$key:$value</p>\n";
+		print "<p>$title";
+		foreach ($chapters as $number => $chapter)
+			{
+				print"<br />Chapter $number is $chapter";
+			}	
+		print "</p>";	
 	}
-		
+				
+				
 				
 ?>
 
