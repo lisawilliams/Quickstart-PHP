@@ -32,13 +32,36 @@ $soups = array (
 'Friday' => 'Clam Chowder' 
 );
 
-// Try to print the array 
+// Count and print the current number of elements
 
-print"<p>$soups</p>";
+$count1 = count($soups);
+print "<p>The soups array originally had $count1 elements.</p>";
+
+// Add two items to the array
+
+$soups['Saturday']='Lobster Bisque';
+$soups['Sunday']="Tomato";
+
+$count2 = count($soups);
+print "<p>After adding 2 more soups, the array now has $count2 elements.</p>";
+
+// Try to print the array 
+// 
+// print"<p>$soups</p>";
 
 // Print the contents of the array
 
 print_r($soups);
+
+?>
+
+<p></p>
+
+<?php
+
+// Use var dump() and see what happens
+
+var_dump($soups);
 
 ?>
 
