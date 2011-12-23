@@ -72,6 +72,9 @@ foreach ($books as $title => $chapters)
 		print "</p>";	
 	}
 				
+print "<pre>";
+var_dump($books);
+print "</pre>";				
 				
 				
 ?>
