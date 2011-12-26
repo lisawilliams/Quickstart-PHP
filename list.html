@@ -1,5 +1,5 @@
 <?php
-$page_title = "";
+$page_title = "I Have This Sorted Out";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -9,19 +9,19 @@ $page_title = "";
 	<title><?php print($page_title) ?></title>
 </head>
 <body>
+<!-- Script 7.6  list.html -->
 
-<?php // Script 7.7 handle_list.php 
+<div><p>Enter the words you want alphabetized with each individual word separated by a space:</p>
 
-// error handling
-ini_set('display errors',1);  // Let me learn from my mistakes!
-error_reporting(E_ALL|E_STRICT); // Show all possible problems! 
+<form action="handle_list.php" method="post">
 
-
-
-
+<input type="text" name="words" size="60" />
+<input type="submit" name="submit" value="Alphebetize!"/>
+</form>
 
 
-?>
+
+
 
 </body>
 </html>

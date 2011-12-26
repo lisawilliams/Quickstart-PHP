@@ -10,16 +10,32 @@ $page_title = "";
 </head>
 <body>
 
-<?php // Script 7.7 handle_list.php 
+<?php // Script 7.9 handle_event.php
 
 // error handling
 ini_set('display errors',1);  // Let me learn from my mistakes!
 error_reporting(E_ALL|E_STRICT); // Show all possible problems! 
 
+// Print an introductory text: 
+print "<p>You want to add an event called <b>{$_POST['name']}</b> which takes place on: <br />";
 
+// Print each weekday 
+if (isset($_POST['weekdays']) AND is_array($_POST['weekdays']))
+	{
+		foreach($_POST['weekdays'] as $day)
+			{
+				print "$day<br /> \n";
+			}	
+	
+		} else {
+		
+			print 'Please select at least one weekday for this event!';
+	}	
+	
+// Complete the paragraph: 
 
-
-
+print '</p>';
+	
 
 ?>
 

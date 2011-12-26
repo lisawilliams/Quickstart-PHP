@@ -1,0 +1,31 @@
+<?php
+$page_title = "I Have This Sorted Out";
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title><?php print($page_title) ?></title>
+</head>
+<body>
+<!-- Script 7.8 - event.html -->
+
+<div><p>Use this form to add an event:</p>
+
+<form action="handle_event.php" method="post">
+<p>Event Name:<input type="text" name="name" size="30" /><p>
+<p>Event Days:
+<input type="checkbox" name="weekdays[]" value="Sunday" />Sun
+<input type="checkbox" name="weekdays[]" value="Monday" />Mon
+<input type="checkbox" name="weekdays[]" value="Tuesday" />Tue 
+<input type="checkbox" name="weekdays[]" value="Wednesday" />Wed
+<input type="checkbox" name="weekdays[]" value="Thursday" />Thu
+<input type="checkbox" name="weekdays[]" value="Friday" />Fri 
+<input type="checkbox" name="weekdays[]" value="Saturday" />Sat 
+</p>
+<input type="submit" name="submit" value="Add the Event!" />
+</form>
+
+</body>
+</html>
