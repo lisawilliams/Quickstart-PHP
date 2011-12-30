@@ -1,5 +1,5 @@
 <!-- END CHANGEABLE CONTENT. -->
-<!-- Script 8.3 - footer.html -->
+<!-- Script 8.7 - footer.html -->
 
 </div>
 
@@ -9,6 +9,14 @@
 <a href="albums.php">Discography</a><br />
 <a href="login.php">Login</a><br />
 <a href="register.php">Register</a></p>
+<p><em><?php // Print the current date and time:
+// Set the timezone:
+date_default_timezone_set('America/New_York');
+
+//Now print the date and time: 
+print date('g:i a l F j');
+?></em></p>
+
 </div>
 
 </body>
