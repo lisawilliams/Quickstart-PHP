@@ -23,8 +23,10 @@ if (isset($_POST['submitted']))
 	{
 	if((strtolower($_POST['email']) == 'me@example.com')&&($_POST['password'] == 'testpass'))
 						
-		{  // Correct!
-			print '<p> Y\'all are logged in!</p>';
+		{  // redirect user to welcome page 
+			ob_end_clean(); // DESTROY ALL BUFFERS!!  Okay, just this one. 
+			header('Location:index.php');
+			exit();
 						
 		}	else	{  // Forgot a field 
 						
