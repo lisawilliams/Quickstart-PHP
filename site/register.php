@@ -47,6 +47,11 @@ if(isset($_POST['submitted']))
 				// Print a message: 
 				print '<p>You are now registered.</p>';
 				
+				// Send the email: 
+				$body = "Thank you for registering with the Elliot Smith fan club! 
+						Your password is '{$_POST['password1']}'.";
+				mail($_POST['email'], 'Registration Confirmation', $body, 'From: admin@example.com');
+				
 		// Clear posted values after successful reg. 	
 		$_POST = array();
 	}
