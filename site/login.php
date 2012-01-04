@@ -23,9 +23,14 @@ if (isset($_POST['submitted']))
 	{
 	if((strtolower($_POST['email']) == 'me@example.com')&&($_POST['password'] == 'testpass'))
 						
-		{  // redirect user to welcome page 
+		{  // Do session stuff: 
+			session_start();
+			$_SESSION['email'] = $_POST['email'];
+			$_SESSION['loggedin'] = time();
+		
+		// redirect user to welcome page 
 			ob_end_clean(); // DESTROY ALL BUFFERS!!  Okay, just this one. 
-			header('Location:index.php');
+			header('Location:welcome.php');
 			exit();
 						
 		}	else	{  // Forgot a field 
