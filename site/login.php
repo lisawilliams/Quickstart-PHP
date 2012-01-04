@@ -44,7 +44,7 @@ if (isset($_POST['submitted']))
 							
 	  print '<form action ="login.php" method ="post">
 	  <p>Email Address:<input type="text" name="email" size="20"></p>
-	  <p>Password:<input type="text" name="password" size="20"></p>
+	  <p>Password:<input type="password" name="password" size="20"></p>
 	  <p><input type="submit" name="submit" value="Log In"></p>
 	  <input type="hidden" name="submitted" value="true" />
 	  </form>';
