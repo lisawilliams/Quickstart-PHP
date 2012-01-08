@@ -17,7 +17,7 @@ ini_set('display errors',1);  // Let me learn from my mistakes!
 error_reporting(E_ALL|E_STRICT); // Show all possible problems! 
 
 // This function makes three pull-down menus for the months, days, and years.
-function make_date_menus()
+function make_date_menus($start_year, $num_years)
 	{
 		// Array to store the months: 
 		$months = array(1=>'January', 'February', 'March', 'April', 'May', 'June',
@@ -43,8 +43,7 @@ function make_date_menus()
 		
 		// Make the year pull-down menu: 
 		print'<select name="year">';
-		$start_year = date('Y');
-			for($y = $start_year; $y<=($start_year +10); $y++)
+			for($y = $start_year; $y<=($start_year + $num_years); $y++)
 				{
 					print"\n<option value=\"$y\">$y</option>";
 				}		
@@ -56,7 +55,7 @@ function make_date_menus()
 	// Make the form: 
 	
 	print '<form action="" method="post">';
-	make_date_menus();
+	make_date_menus(2009, 15);
 	print '</form>';
 	
 	?>
