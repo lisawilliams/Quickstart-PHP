@@ -9,6 +9,8 @@
 <body>
 
 <?php // Script 10.1 - menus1.php
+//I'm putting a few new comments in here to demonstrate how GitHub for Mac handles
+// changes to code you write. 
 
 // This script defines and calls a function. 
 
