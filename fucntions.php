@@ -42,7 +42,7 @@ function make_full_name($first, $last)
 	
 make_full_name(Lisa, Williams);
 
-print "$fullname.";		
+
 
 
 
