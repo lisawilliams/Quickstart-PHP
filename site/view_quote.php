@@ -28,6 +28,18 @@ $n = count($data);
 // Pick a random item:
 $rand = rand(0,($n -1));
 
+// Note for the above:  rand() is taking two arguments here -- the element in the array 
+// you want it to start with -- in this case, the first element, [0].  The second
+// argument is the element you want the function to stop at, in this case the last 
+// element in the array.  We figured that out by using the count() function on 
+// $data, which is the array variable we put the entire file of quotes.txt in. 
+// count($data) finds out how many elements are in the array.  In this case, 
+// each element is a line in the file ended by a newline character (\n). 
+// The text of each line is a quote.  
+// rand() then chooses a random quote in the array, 
+// and the print statement below prints it on the screen when the user loads this file
+// in their browser.  
+
 // Print the quotation: 
 print '<p>'.trim($data[$rand]).'<p>';
 
