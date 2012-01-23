@@ -34,7 +34,7 @@ foreach ($contents as $item)
 	{
 		if((is_dir($item)) AND (substr($item, 0, 1)!='.'))
 			{
-				print "<li>$item</li>\n";
+				print "<li>$item</li>";
 			}	
 	}
 	
@@ -53,7 +53,7 @@ print '<hr /><h2>Files</h2>
 
 // List the files: 
 foreach($contents as $item){
-		if((is_file($item)) AND (substr($item, 0, 1)!='.'
+		if((is_file($item)) AND (substr($item, 0, 1)!='.'))
 		{
 			// Get the file size:
 			$fs = filesize($item);
@@ -62,11 +62,11 @@ foreach($contents as $item){
 			$lm = date('Fj, Y', filemtime($item));
 			
 			// Print the information: 
-			print '<tr>
+			print "<tr>
 			<td>$item</td>
 			<td>$fs bytes</td>
 			<td>$lm</td>
-			</tr>\n';
+			</tr>\n";
 			}
 		}	
 		
