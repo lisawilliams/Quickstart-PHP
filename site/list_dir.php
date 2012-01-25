@@ -59,7 +59,7 @@ foreach($contents as $item){
 			$fs = filesize($item);
 			
 			// Get the file's modification date: 
-			$lm = date('Fj, Y', filemtime($item));
+			$lm = date('F j, Y', filemtime($item));
 			
 			// Print the information: 
 			print "<tr>
