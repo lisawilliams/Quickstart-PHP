@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>Register</h1>
-<?php // Script 11.6 - register.php
+<?php // Script 11.6 - register2.php
 /* This script registers a user by storing their information in a text file and creating a directory for them. */
 
 // Identify the directory and file to use:
@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 // Leave PHP and display the form:
 ?>
 
-<form action="register.php" method="post">
+<form action="register2.php" method="post">
 	<p>Username: <input type="text" name="username" size="20" /></p>
 	<p>Password: <input type="password" name="password1" size="20" /></p>
 	<p>Confirm Password: <input type="password" name="password2" size="20" /></p>
