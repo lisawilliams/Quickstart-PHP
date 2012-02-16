@@ -1,0 +1,7 @@
+"Quantity has a quality all its own." -- Winston Churchill, speaking about the Red Army. 
+Free your mind and your ass will follow. 
+Where your heart is, there your treasure shall be also. 
+Holy crap...I can't believe this actually works.  PROGRAM ALL THE THINGS!!
+I'm adding a quotation using the new improved script which locks the file for writing only by one user at a time. 
+Let's try that again; I got an error message last time. 
+Let's try that again; I got an error message last time. 
