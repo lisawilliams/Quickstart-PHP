@@ -70,7 +70,7 @@ if(isset($_POST['submitted']))
 <input type="hidden" name="submitted" value="true" />
 </form>
 
-<a href ="quotes2.txt">Go see your quotes!</a>
+<a href ="view_quote2.php">Go see your quotes!</a>
 
 </body>
 </html>

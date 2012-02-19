@@ -5,3 +5,9 @@ Holy crap...I can't believe this actually works.  PROGRAM ALL THE THINGS!!
 I'm adding a quotation using the new improved script which locks the file for writing only by one user at a time. 
 Let's try that again; I got an error message last time. 
 Let's try that again; I got an error message last time. 
+"We have nothing to fear but fear itself." Franklin Delano Roosevelt
+"Bullshit isn't the act of knowing the truth condition of a statement and saying otherwise.  It's the act of not caring about the truth condition of a statement."  -- Harry Frankfurt
+"I blog to back up the part of me that can be backed up."  
+
+"A world oriented toward transparency must be a world oriented toward forgiveness."  David Weinberger
+"Be liberal in what you receive, and conservative in what you send."  Jon Postel
