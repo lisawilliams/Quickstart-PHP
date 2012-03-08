@@ -10,12 +10,17 @@ $page_title = "Add a Blog Entry";
 </head>
 <body>
 
-<?php // Script 12.5, add_entry.php
+<?php // Script 12.6, add_entry.php #2
 // This script adds an entry to the database. 
+// This version of the script reduces vulnerabilities associated with using apostrophes in a user's entry
 
 // error handling
 ini_set('display errors',1);  // Let me learn from my mistakes!
 error_reporting(E_ALL|E_STRICT); // Show all possible problems! 
+
+if(isset($_POST['submitted']))
+
+{
 
 // Connect and select: 
 $dbc = mysql_connect('localhost','database','lavalamp');
@@ -25,8 +30,8 @@ mysql_select_db('myblog');
 $problem = FALSE;
 if(!empty($_POST['title']) && !empty($_POST['entry'])) 
 	{
-		$title = trim($_POST['title']);
-		$entry = trim($_POST['entry']);
+		$title = mysql_real_escape_string(trim($_POST['title']));
+		$entry = mysql_real_escape_string(trim($_POST['entry']));
 		
 	}	else	{	
 	
@@ -55,6 +60,7 @@ if(!$problem)
 	
 	mysql_close();
 	}
+}	
 // End of form submission IF. 
 
 // Display the form: 
